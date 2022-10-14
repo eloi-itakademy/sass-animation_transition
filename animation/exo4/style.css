@@ -1,0 +1,36 @@
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .box {
+  position: relative;
+  height: 60px;
+  width: 400px;
+  padding: 20px;
+  background-color: blueviolet;
+}
+body .box .circle {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: white;
+  animation: 2s slide infinite;
+}
+
+@keyframes slide {
+  0% {
+    right: 20px;
+  }
+  50% {
+    right: calc(90% - 40px);
+  }
+  100% {
+    right: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

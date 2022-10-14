@@ -1,0 +1,45 @@
+$bg-color: white;
+$btn-bg-color: deeppink;
+
+body {
+  background-color: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+  .btn-content {
+    label.btn-burger {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 600px;
+      cursor: pointer;
+      .pipe {
+        background-color: $btn-bg-color;
+        width: 100%;
+        height: 50px;
+        &:first-child, &:last-child {
+          transition: transform 1s;
+        }
+        &:nth-child(2) {
+          transition: opacity 0.5s;
+        }
+      }
+    }
+    input[type='checkbox'] {
+      display: none;
+    }
+    input[type='checkbox']:checked ~ .btn-burger {
+      .pipe:first-child {
+        transform: rotate(45deg) translateY(100px);
+      }
+      .pipe:nth-child(2) {
+        opacity: 0;
+      }
+      .pipe:last-child {
+        transform: rotate(-45deg) translateY(-80px);
+      }
+    }
+  }
+}

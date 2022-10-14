@@ -1,0 +1,30 @@
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+body .content {
+  display: flex;
+  height: 700px;
+  width: 500px;
+}
+body .content .vertical-line {
+  height: 100%;
+  flex: 1;
+  transition: all ease 0.5s;
+}
+body .content .vertical-line:hover {
+  flex: 0 1 60%;
+  transition: all ease 0.5s;
+}
+body .content .vertical-line:nth-child(odd) {
+  background-color: #263a61;
+}
+body .content .vertical-line:nth-child(even) {
+  background-color: #4aa82c;
+}
+
+/*# sourceMappingURL=style.css.map */

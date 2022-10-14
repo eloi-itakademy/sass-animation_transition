@@ -1,0 +1,56 @@
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .box {
+    position: relative;
+    height: 60px;
+    width: 400px;
+    padding: 20px;
+    background-color: blueviolet;
+    .circle {
+      position: absolute;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      background-color: white;
+      animation: 1s slideTrail infinite, trail 2000ms .3s ease-in-out infinite;;
+      //animation-timing-function: cubic-bezier(0, 1.1, -0.6, 1);
+    }
+  }
+}
+
+@keyframes slideTrail {
+  0% {
+    right: 20px;
+  }
+  50% {
+    right: calc(90% - 20px);
+  }
+  100% {
+    right: 20px;
+  }
+}
+
+/* Lists to hold shadows */
+$start-shadow: ();
+$end-shadow: ();
+
+// Build box-shadow lists
+@for $n from 0 through 50 {
+  $start-shadow: append($start-shadow, $n * -1px 0 0 rgba(white, 0.1), comma);
+  $end-shadow: append($end-shadow, $n * 1px 0 0 rgba(white, 0.1), comma);
+}
+
+@keyframes trail {
+  25% {
+    box-shadow: $start-shadow;
+  }
+
+  75% {
+    box-shadow: $end-shadow;
+  }
+
+}

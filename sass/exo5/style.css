@@ -1,0 +1,36 @@
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+body .content {
+  display: flex;
+  width: 300px;
+  background-color: blueviolet;
+  color: white;
+  padding: 20px;
+}
+body .content .paragraph {
+  position: relative;
+}
+body .content .paragraph .popover {
+  cursor: pointer;
+  background-color: #175b46;
+}
+body .content .paragraph .popover:hover ~ .popover-box {
+  display: block;
+}
+body .content .paragraph .popover-box {
+  display: none;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100px;
+  background-color: #175b46;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */

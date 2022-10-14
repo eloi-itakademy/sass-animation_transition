@@ -1,0 +1,41 @@
+body {
+  background-color: #32a897;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+body .btn-content {
+  display: flex;
+  gap: 20px;
+}
+body .btn-content .btn input {
+  display: none;
+}
+body .btn-content .btn label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all ease 1s;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+body .btn-content .btn label:hover {
+  background-color: #20665c;
+  transition: all ease 1s;
+}
+body .btn-content .btn input[type=radio]:checked ~ label {
+  background-color: white;
+  color: #32a897;
+}
+
+/*# sourceMappingURL=style.css.map */

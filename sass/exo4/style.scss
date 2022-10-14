@@ -1,0 +1,33 @@
+$bg-color-dark: #263a61;
+$bg-color-light: #4aa82c;
+
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+
+  .content {
+      display: flex;
+      height: 700px;
+      width: 500px;
+      .vertical-line {
+          height: 100%;
+          //min-width: 60px;
+          flex: 1;
+          transition: all ease 0.5s;
+          &:hover {
+              flex: 0 1 60%;
+              transition: all ease 0.5s;
+          }
+          &:nth-child(odd) {
+              background-color: $bg-color-dark;
+          }
+          &:nth-child(even) {
+              background-color: $bg-color-light;
+          }
+      }
+  }
+}

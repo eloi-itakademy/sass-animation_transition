@@ -1,0 +1,46 @@
+$bg-color: #32a897;
+$btn-bg-color: white;
+$ft-color: white;
+
+body {
+  background-color: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+  .btn-content {
+    display: flex;
+    gap: 20px;
+    .btn {
+      input {
+        display: none;
+      }
+      label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        background-color: transparent;
+        color: $ft-color;
+        cursor: pointer;
+        transition: all ease 1s;
+        border: 1px solid $ft-color;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        font-size: 25px;
+        font-weight: bold;
+        &:hover {
+          background-color: #20665c;
+          transition: all ease 1s;
+        }
+      }
+
+      input[type='radio']:checked ~ label{
+        background-color: $ft-color;
+        color: $bg-color;
+      }
+    }
+  }
+}

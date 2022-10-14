@@ -1,0 +1,40 @@
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+body .btn-content label.btn-burger {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+  cursor: pointer;
+}
+body .btn-content label.btn-burger .pipe {
+  background-color: deeppink;
+  width: 100%;
+  height: 50px;
+}
+body .btn-content label.btn-burger .pipe:first-child, body .btn-content label.btn-burger .pipe:last-child {
+  transition: transform 1s;
+}
+body .btn-content label.btn-burger .pipe:nth-child(2) {
+  transition: opacity 0.5s;
+}
+body .btn-content input[type=checkbox] {
+  display: none;
+}
+body .btn-content input[type=checkbox]:checked ~ .btn-burger .pipe:first-child {
+  transform: rotate(45deg) translateY(100px);
+}
+body .btn-content input[type=checkbox]:checked ~ .btn-burger .pipe:nth-child(2) {
+  opacity: 0;
+}
+body .btn-content input[type=checkbox]:checked ~ .btn-burger .pipe:last-child {
+  transform: rotate(-45deg) translateY(-80px);
+}
+
+/*# sourceMappingURL=style.css.map */

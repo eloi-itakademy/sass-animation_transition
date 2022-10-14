@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  .square {
+    width: 500px;
+    height: 500px;
+    animation: 4s changeBG infinite;
+  }
+}
+@keyframes changeBG {
+  0% {
+    background-color: greenyellow;
+  }
+  25% {
+    background-color: yellow;
+  }
+  75% {
+    background-color: blue;
+  }
+  100% {
+    background-color: greenyellow;
+  }
+}

@@ -1,0 +1,40 @@
+$color-light: blueviolet;
+$color-dark: #175b46;
+$font-color: white;
+
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+
+  .content {
+    display: flex;
+    width: 300px;
+    background-color: $color-light;
+    color: $font-color;
+    padding: 20px;
+
+    .paragraph {
+      position: relative;
+      .popover {
+        cursor: pointer;
+        background-color: $color-dark;
+        &:hover ~ .popover-box {
+          display: block;
+        }
+      }
+      .popover-box {
+        display: none;
+        position: absolute;
+        top: -50px;
+        left: 0;
+        width: 100px;
+        background-color: $color-dark;
+        font-size: 12px;
+      }
+    }
+  }
+}
